@@ -3,7 +3,7 @@ a website designed for my University
 
 ## follow Instructions :
 
-* you need NodeJs to run this script , you can download it from  [ChromeWebDriver](https://nodejs.org/en/download/).
+* you need NodeJs to run this script , you can download it from  [NodeJs](https://nodejs.org/en/download/).
 * after successfully download , go to terminal an locate the directory of files:
 ```
 cd to/path/
