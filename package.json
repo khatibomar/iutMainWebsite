@@ -1,0 +1,17 @@
+{
+  "name": "iut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css"
+  },
+  "author": "OmarElKhatib",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

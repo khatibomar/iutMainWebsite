@@ -1,0 +1,24 @@
+.header {
+    height: 90vh;
+    /*vh : view port height*/
+    background-image: linear-gradient(to right, rgba($color-1, 0.8), rgba($color-2, 0.8)) , url('../../images/headerBg2.jpg');
+    background-size: center;
+    background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo {
+        height: 3.5rem;
+    }
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
