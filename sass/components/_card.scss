@@ -4,6 +4,15 @@
     -moz-perspective: 150rem;
     position: relative;
     height: 52rem;
+    @include respond(tab-land) {
+        margin: 0 10rem;
+    }
+    
+    @include respond(phone) {
+        box-shadow: 0 1rem 1rem rgba($black, .05) ;
+        height: 52rem;
+        margin: 0 2rem;
+    }
     &__side {
         height: 52rem;
         transition: all .8s ease;

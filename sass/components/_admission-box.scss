@@ -6,7 +6,17 @@
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($black, .15);
     transition: transform 0.5s;
-    height: 40%;
+    height: 40rem;
+
+    @include respond(tab-land) {
+        margin: 0 10rem;
+    }
+
+    @include respond(phone) {
+        height : 45rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 1rem 1rem rgba($black, .05) ;
+    }
     &__icon {
         font-size: 6rem;
         margin-bottom: .5rem;

@@ -4,11 +4,26 @@
     box-sizing: border-box;
 }
 
+//1rem : 10px
+
 html {
     // this defines what 1rem is
     font-size: 62.5%;
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%;
+    }
 }
 
 body {
     box-sizing: border-box;
+    background-color: $grey-light-1;
 }
