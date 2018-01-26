@@ -227,12 +227,25 @@ body {
   height: 40rem; }
   @media only screen and (max-width: 75em) {
     .admission-box {
-      margin: 0 10rem; } }
+      height: 40rem;
+      padding: 2rem;
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+      margin-right: 0;
+      width: 100%; } }
+  @media only screen and (max-width: 56.25em) {
+    .admission-box {
+      height: 40rem;
+      padding: 2rem;
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+      margin: 0;
+      width: 100%; } }
   @media only screen and (max-width: 37.5em) {
     .admission-box {
       height: 45rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05); } }
+      padding: 2rem;
+      margin: 0;
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+      width: 100%; } }
   .admission-box__icon {
     font-size: 6rem;
     margin-bottom: .5rem;
