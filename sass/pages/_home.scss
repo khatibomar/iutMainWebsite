@@ -3,7 +3,7 @@
     margin: 0 2rem;
         text-align: center;
         padding-top: 0;
-        padding-bottom: 25rem;    
+        padding-bottom: 25rem;
 }
 
 .section-features {
@@ -27,6 +27,14 @@
 
 .section-contact {
     padding: 10rem 0;
+    position: relative;
+    background-image: linear-gradient(to right, rgba($color-1, 0), rgba($color-2, 0.8));
+    @include respond(phone) {
+        background-image: linear-gradient(to right, rgba(69, 83, 239, 0.8), rgba(49, 150, 173, 0.8)),url('../images/contact-phone.jpg');
+    }
+}
+
+.section-events {
     position: relative;
     background-image: linear-gradient(to right, rgba($color-1, 0), rgba($color-2, 0.8));
 }

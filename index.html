@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="css/icon-font.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="sortcut icon" type="image/png" href="images/iutLogo.jpg">
+    <!-- Core CSS file -->
+    <link rel="stylesheet" href="css/photoswipe.css">
+
+    <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+     In the folder of skin CSS file there are also:
+     - .png and .svg icons sprite,
+     - preloader.gif (for browsers that do not support CSS animations) -->
+    <link rel="stylesheet" href="css/default-skin.css">
+
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+
 
     <title>Institute University of Technology - Universitee libanaise</title>
 </head>
@@ -32,6 +44,77 @@
 
     </header>
 
+
+    <!-- slider-script -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- End gallery-script-->
+
+    <!-- begin about -->
     <main>
         <section class="section-about">
             <div class="u-center-text u-margin-bottom-b">
@@ -53,9 +136,9 @@
                 <div class="col-1-of-2">
                     <h3 class="heading-teriary u-margin-bottom-b">Gallery</h3>
                     <div class="composition">
-                        <img src="images/gallery/g1.jpeg" alt="img 1" class="composition__photo composition__photo--p1">
-                        <img src="images/gallery/g2.jpeg" alt="img 2" class="composition__photo composition__photo--p2">
-                        <img src="images/gallery/g3.jpeg" alt="img 3" class="composition__photo composition__photo--p3">
+                        <img src="images/gallery/g1.jpeg" onclick="showGallery(0)" alt="img 1" class="composition__photo composition__photo--p1">
+                        <img src="images/gallery/g2.jpeg" onclick="showGallery(1)" alt="img 2" class="composition__photo composition__photo--p2">
+                        <img src="images/gallery/g3.jpeg" onclick="showGallery(2)" alt="img 3" class="composition__photo composition__photo--p3">
                     </div>
                 </div>
             </div>
@@ -83,8 +166,8 @@
                         <i class="feature-box__icon icon-basic-todo-txt"></i>
                         <h3 class="heading-tertiary">Best Tutor</h3>
                         <p class="feature-box__text">
-                            The Institute of Technology offers the opportunity for every one wishing to specialize in one area to obtain
-                            knowledge and skills.
+                            The Institute of Technology offers the opportunity for every one wishing to specialize in one area to obtain knowledge and
+                            skills.
                         </p>
 
                     </div>
@@ -234,49 +317,38 @@
 
         </section>
 
-
-
-
-
         <!-- Events Section -->
 
-        <section class="section-contact">
+        <section class="section-events">
+                <div class="carousel-wrapper">
+                    <span id="item-1"></span>
+                    <span id="item-2"></span>
+                    <span id="item-3"></span>
+                    <div class="carousel-item item-1">
+                        <h2>انجاز في المعلوماتية</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis.
+                            Aliquam erat volutpat. Maecenas lacus nunc, imperdiet sed mi et, finibus suscipit mi.</p>
+                        <a class="arrow arrow-prev" href="#item-3"></a>
+                        <a class="arrow arrow-next" href="#item-2"></a>
+                    </div>
 
-            <!-- <div class="u-center-text u-margin-bottom-b">
-                    <h2 class="heading-secondary">
-                        Reach & Contact
-                    </h2>
-                </div> -->
+                    <div class="carousel-item item-2">
+                        <h2>Item 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis.
+                            Aliquam erat volutpat.</p>
+                        <a class="arrow arrow-prev" href="#item-1"></a>
+                        <a class="arrow arrow-next" href="#item-3"></a>
+                    </div>
 
-
-            <div class="row">
-                <div class="col-1-of-2">
-                    <div class="path">
-                        <div class="path__img--box">
-                            <i class="feature-box__icon icon-basic-globe"></i>
-                            <h1 class="u-margin-bottom-s u-margin-top-s">Events</h1>
-                            <ul>
-                                <li>her i will put some events </li>
-                                <li>Sooooooooo</li>
-                                <li>DUUUUUUUUUUUMMMM</li>
-                                <li class="u-add-bottom-border-2">Hello</li>
-                            </ul>
-
-                        </div>
+                    <div class="carousel-item item-3">
+                        <h2>Item 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis.
+                            Aliquam erat volutpat.</p>
+                        <a class="arrow arrow-prev" href="#item-2"></a>
+                        <a class="arrow arrow-next" href="#item-1"></a>
                     </div>
                 </div>
-                <div class="col-1-of-2">
-                    <div>Maybe An Courasel?</div>
-                </div>
-            </div>
-            </div>
         </section>
-
-
-
-
-
-
 
         <!-- Admissions section-->
 
@@ -457,23 +529,15 @@
 
     </main>
 
-    <script>
-        function initMap() {
-            var uluru = {
-                lat: 33.552745,
-                lng: 35.374630
-            };
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: uluru
-            });
-            var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-            });
-        }
-    </script>
+    <script src="js/map.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfk8yrpMX8wvJkr1GOGQfgTawLqIIYNhE&callback=initMap"></script>
+
+    <!-- Core JS file -->
+    <script src="js/photoswipe.min.js"></script>
+
+    <!-- UI JS file -->
+    <script src="js/photoswipe-ui-default.min.js"></script>
+    <script src="js/gallery.js"></script>
 
 
 </body>
