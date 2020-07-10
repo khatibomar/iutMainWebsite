@@ -17,3 +17,5 @@ npm install jquery --save
 ```
 npm run compile:sass
 ```
+ # Deployment
+ https://iutmainwebsite-master-9ypkqhak4.now.sh
